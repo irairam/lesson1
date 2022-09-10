@@ -26,14 +26,10 @@
 # Сделайте так, чтобы результирующая строка выводилась заглавными буквами
 
 def get_summ(one, two, delimiter='&'):
-    if one == ' ':
+    if one == ' ' or two == ' ':
         raise ValueError('Пробел не катит')
-    if one == '':
-        raise ValueError('Пустое значение не катит')
-    if two == ' ':
-        raise ValueError('Пробел не катит')
-    if two == '':
-        raise ValueError('Пустое значение не катит')    
+    if one == '' or two == '':
+        raise ValueError('Пустое значение не катит') 
     name = f'{one}{delimiter}{two}'.upper()
     return name
 

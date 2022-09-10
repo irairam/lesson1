@@ -5,7 +5,7 @@
 #     set(price) <= allowed
 
 
-#Форматируем, как заказано в задании:
+#Форматируем, как заказано в задании с валидацией:
 def format_price(price):
     if  set(price).issubset(set('1234567890.')) != True:
         raise ValueError('Можно только числа и точки')
